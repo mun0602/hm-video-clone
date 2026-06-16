@@ -3,7 +3,11 @@
 
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:8000/api';
+const API_BASE = (
+  process.env.REACT_APP_API_URL ||
+  process.env.REACT_APP_SUPABASE_URL ||
+  'http://localhost:8000'
+).replace(/\/$/, '') + '/api';
 
 // Helper để lấy user hiện tại từ LocalStorage
 const getStoredSession = () => {

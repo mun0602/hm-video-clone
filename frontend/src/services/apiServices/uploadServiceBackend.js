@@ -13,10 +13,11 @@ export async function uploadVideo({ file, title = '', tags = '', onProgress } = 
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
     const token = localStorage.getItem('hm_token');
-    const baseUrl =
+    const baseUrl = (
       process.env.REACT_APP_API_URL ||
       process.env.REACT_APP_SUPABASE_URL ||
-      'http://localhost:8000';
+      'http://localhost:8000'
+    ).replace(/\/$/, '');
     const url = `${baseUrl}/api/videos/upload`;
 
     xhr.open('POST', url, true);

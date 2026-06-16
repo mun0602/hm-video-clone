@@ -4,10 +4,11 @@
  * Trả về JSON hoặc throw Error với message từ server.
  */
 
-const API_BASE_URL =
+const API_BASE_URL = (
   process.env.REACT_APP_API_URL ||
   process.env.REACT_APP_SUPABASE_URL ||
-  'http://localhost:8000';
+  'http://localhost:8000'
+).replace(/\/$/, '');
 
 const TOKEN_KEY = 'hm_token';
 
