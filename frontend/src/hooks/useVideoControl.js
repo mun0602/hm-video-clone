@@ -38,6 +38,7 @@ export default function useVideoControl({
       }
       
       const isSkipped = duration < 3;
+      const isRewatched = rewatchesRef.current > 0;
       const baseUrl = (
         process.env.REACT_APP_API_URL ||
         process.env.REACT_APP_SUPABASE_URL ||
