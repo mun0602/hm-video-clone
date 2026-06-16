@@ -1,0 +1,30 @@
+# Backend dependencies for hm-video-clone
+# Core
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.6.0
+
+# Database
+sqlalchemy>=2.0.0
+
+# Auth
+passlib[bcrypt]>=1.7.4
+python-jose[cryptography]>=3.3.0
+python-multipart>=0.0.9
+
+# Cloudflare R2 (S3-compatible)
+boto3>=1.34.0
+
+# Scheduler
+apscheduler>=3.10.0
+
+# Config
+python-dotenv>=1.0.0
+
+# Video processing (optional - fallback nếu không có ffmpeg)
+# ffmpeg binary phải có trên PATH nếu muốn auto thumbnail
+
+# Dev/test
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+httpx>=0.27.0  # cho TestClient

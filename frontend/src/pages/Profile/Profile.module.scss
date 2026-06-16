@@ -1,0 +1,132 @@
+.profile-container {
+  margin-left: 0;
+  flex: 1;
+  overflow-y: scroll;
+
+  @media (min-width: 1024px) {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+  }
+}
+
+.profile-wrapper {
+  display: flex;
+  min-height: 100vh;
+  padding: 24px 32px;
+  margin: 0 auto;
+  max-width: calc(1254px + 64px);
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+// Navigation tabs
+.nav-tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(22, 24, 35, 0.08);
+  margin-bottom: 24px;
+  position: relative;
+  min-height: 46px;
+  --slider-left: 0px;
+  --slider-width: 0px;
+
+  // Thanh trượt duy nhất với màu text-primary
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: var(--slider-left);
+    width: var(--slider-width);
+    height: 2px;
+    background-color: var(--text-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+  }
+}
+
+.nav-tab {
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  cursor: pointer;
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  gap: 6px;
+  color: rgb(115, 116, 123);
+
+  &:hover {
+    color: rgba(22, 24, 35, 0.75);
+  }
+
+  &.active {
+    color: var(--text-color);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.videos {
+  width: 100%;
+}
+
+// Skeleton loading styles - lighter version
+.skeleton {
+  background: linear-gradient(90deg, #f8f8f8 25%, #f0f0f0 50%, #f8f8f8 75%);
+  background-size: 200% 100%;
+  animation: loading 2s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .profile-wrapper {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile-container {
+    padding-top: 54px; /* Tránh đè lên bởi MobileHeader */
+    padding-bottom: 60px; /* Tránh đè lên bởi BottomBar */
+  }
+
+  .profile-wrapper {
+    padding: 12px;
+  }
+
+  .nav-tabs {
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 16px;
+    min-height: 40px;
+  }
+
+  .nav-tab {
+    padding: 0 8px;
+    font-size: 1.5rem;
+    gap: 4px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+}

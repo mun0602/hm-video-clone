@@ -1,0 +1,111 @@
+{
+  "id": "7640995569560735007",
+  "formats": [
+    {
+      "format_id": "audio",
+      "url": "https://sf9-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/okDtB5cQqoCtUAC2kfuwNbX1YgDJ4BnXjQdZMe",
+      "ext": "m4a",
+      "acodec": "aac",
+      "vcodec": "none",
+      "protocol": "https",
+      "audio_ext": "m4a",
+      "video_ext": "none",
+      "vbr": 0,
+      "abr": null,
+      "tbr": null,
+      "resolution": "audio only",
+      "aspect_ratio": null,
+      "filesize_approx": null,
+      "http_headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-us,en;q=0.5",
+        "Sec-Fetch-Mode": "navigate",
+        "Referer": "https://www.tiktok.com/@scout2015/video/7640995569560735007"
+      },
+      "format": "audio - audio only"
+    }
+  ],
+  "subtitles": {},
+  "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-us,en;q=0.5",
+    "Sec-Fetch-Mode": "navigate",
+    "Referer": "https://www.tiktok.com/@scout2015/video/7640995569560735007"
+  },
+  "channel": "Scout, Suki & Stella",
+  "channel_id": "MS4wLjABAAAAPZWNdkF_cmVSPCvV0Y6MCsH29mlAOlMOX3ikzGvlfMm3K6OMZv-JrRImpEHxdIMI",
+  "uploader": "scout2015",
+  "uploader_id": "53279706535428096",
+  "channel_url": "https://www.tiktok.com/@MS4wLjABAAAAPZWNdkF_cmVSPCvV0Y6MCsH29mlAOlMOX3ikzGvlfMm3K6OMZv-JrRImpEHxdIMI",
+  "uploader_url": "https://www.tiktok.com/@scout2015",
+  "track": "Clocks",
+  "album": "Clocks",
+  "artists": [
+    "Coldplay"
+  ],
+  "duration": 46,
+  "title": "Today we are officially graduating with a Bachelor of Science in Comp...",
+  "description": "Today we are officially graduating with a Bachelor of Science in Computer Science, concentration in Artificial Intelligence and Machine Learning, minor in Mathematics from Florida Southern College. Perfect 4.0 GPA. University Honors. Three years. I say we because Shelly was there for every late night, every big moment, every step of the way. She came into my life when it was hardest, after I lost my first senior dog, Stormy, two years in. Stormy helped me start. Shelly finished it with me. I had people in my corner who showed up in ways I will never fully be able to put into words. None of this was mine alone. So to my dogs, my family, and my friends, we did it. Along the way I expanded my business, wrote a thesis, and became someone I am really proud of. I came in with a dream. I'm leaving with a fire that nothing is going to put out. What's next? Stay tuned. @International Audience ❤️🐍 #rescuedog #college #graduation #dogs",
+  "timestamp": 1779057938,
+  "view_count": 6803,
+  "like_count": 242,
+  "repost_count": 2,
+  "comment_count": 11,
+  "save_count": 21,
+  "thumbnails": [
+    {
+      "id": "cover",
+      "url": "https://p16-common-sign.tiktokcdn.com/tos-maliva-i-photomode-us/9ae482fcd04846a69e2c7e7e77cdc27c~tplv-photomode-image.jpeg?dr=14555&x-expires=1781802000&x-signature=KPHpD%2Fn%2F5XdPetBW2p4NWYfedkU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=my2&ftpl=1",
+      "preference": -1
+    },
+    {
+      "id": "originCover",
+      "url": "https://p16-common-sign.tiktokcdn.com/tos-maliva-i-photomode-us/9ae482fcd04846a69e2c7e7e77cdc27c~tplv-photomode-image.jpeg?dr=14555&x-expires=1781802000&x-signature=KPHpD%2Fn%2F5XdPetBW2p4NWYfedkU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=my2&ftpl=1",
+      "preference": -1
+    }
+  ],
+  "webpage_url": "https://www.tiktok.com/@scout2015/video/7640995569560735007",
+  "original_url": "https://www.tiktok.com/@scout2015/video/7640995569560735007",
+  "webpage_url_basename": "7640995569560735007",
+  "webpage_url_domain": "tiktok.com",
+  "extractor": "TikTok",
+  "extractor_key": "TikTok",
+  "playlist": null,
+  "playlist_index": null,
+  "thumbnail": "https://p16-common-sign.tiktokcdn.com/tos-maliva-i-photomode-us/9ae482fcd04846a69e2c7e7e77cdc27c~tplv-photomode-image.jpeg?dr=14555&x-expires=1781802000&x-signature=KPHpD%2Fn%2F5XdPetBW2p4NWYfedkU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=my2&ftpl=1",
+  "display_id": "7640995569560735007",
+  "fulltitle": "Today we are officially graduating with a Bachelor of Science in Comp...",
+  "duration_string": "46",
+  "upload_date": "20260517",
+  "release_year": null,
+  "artist": "Coldplay",
+  "requested_subtitles": null,
+  "_has_drm": null,
+  "epoch": 1781629636,
+  "format_id": "audio",
+  "url": "https://sf9-ies-music-sg.tiktokcdn.com/obj/tos-alisg-ve-2774/okDtB5cQqoCtUAC2kfuwNbX1YgDJ4BnXjQdZMe",
+  "ext": "m4a",
+  "acodec": "aac",
+  "vcodec": "none",
+  "protocol": "https",
+  "audio_ext": "m4a",
+  "video_ext": "none",
+  "vbr": 0,
+  "abr": null,
+  "tbr": null,
+  "resolution": "audio only",
+  "aspect_ratio": null,
+  "filesize_approx": null,
+  "format": "audio - audio only",
+  "_filename": "metadata/7640995569560735007.m4a",
+  "filename": "metadata/7640995569560735007.m4a",
+  "_type": "video",
+  "_version": {
+    "version": "2026.03.17",
+    "current_git_head": null,
+    "release_git_head": "04d6974f502bbdfaed72c624344f262e30ad9708",
+    "repository": "yt-dlp/yt-dlp"
+  }
+}

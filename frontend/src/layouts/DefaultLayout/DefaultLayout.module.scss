@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.container {
+  margin-top: 0px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-self: center;
+  flex: 1 1 auto;
+  background-color: var(--ui-page-flat-1);
+}
+
+.content {
+  // flex: 0 0 calc(100vw - 240px);
+  position: relative;
+  margin: 0px auto;
+  width: 100%;
+  min-width: 420px;
+  flex-shrink: 1;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  transition: margin-left 0.4s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    margin-left: 72px;
+    width: calc(100% - 72px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    margin-left: 0px !important;
+    width: 100% !important;
+    min-width: unset !important;
+    padding-bottom: 58px; /* Dành chỗ cho BottomBar */
+  }
+}

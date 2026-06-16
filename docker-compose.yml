@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:////app/data/tiktok.db
+      - CORS_ORIGINS=*
+    volumes:
+      - backend-data:/app/data
+      - backend-uploads:/app/static/uploads
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - REACT_APP_SUPABASE_URL=/
+    restart: always
+    ports:
+      - "3005:80"
+    depends_on:
+      - backend
+
+volumes:
+  backend-data:
+  backend-uploads:

@@ -1,0 +1,110 @@
+{
+  "id": "7564949445721345293",
+  "formats": [
+    {
+      "format_id": "audio",
+      "url": "https://v77.tiktokcdn.com/3dbe8432bf1cd94a5d34b4b46ed2bbbc/6a32d473/video/tos/useast2a/tos-useast2a-v-27dcd7/8578a3d4bec545fb970fa21ecd5e0eac/?a=1180&bti=ODszNWYuMDE6&&bt=123&ft=.NpOcInz7ThO2qiGXq8Zmo&mime_type=audio_mp4&rc=anRraDxvNGQ4NjMzNzU8M0BpanRraDxvNGQ4NjMzNzU8M0BecC4xXzZnMS5gLS1kMTZzYSNecC4xXzZnMS5gLS1kMTZzcw%3D%3D&vvpl=1&l=2026061701074519C60E8082A50F1A6A99&btag=e00078000",
+      "ext": "m4a",
+      "acodec": "aac",
+      "vcodec": "none",
+      "protocol": "https",
+      "audio_ext": "m4a",
+      "video_ext": "none",
+      "vbr": 0,
+      "abr": null,
+      "tbr": null,
+      "resolution": "audio only",
+      "aspect_ratio": null,
+      "filesize_approx": null,
+      "http_headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-us,en;q=0.5",
+        "Sec-Fetch-Mode": "navigate",
+        "Referer": "https://www.tiktok.com/@bellathorne/video/7564949445721345293"
+      },
+      "format": "audio - audio only"
+    }
+  ],
+  "subtitles": {},
+  "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-us,en;q=0.5",
+    "Sec-Fetch-Mode": "navigate",
+    "Referer": "https://www.tiktok.com/@bellathorne/video/7564949445721345293"
+  },
+  "channel": "Bella Thorne",
+  "channel_id": "MS4wLjABAAAARMM5AEhQ2rAL74Yux7eKtiyj4OsxPK5KuCVqiO-LKICC1O2sYICLCMfTWbR1__Mg",
+  "uploader": "bellathorne",
+  "uploader_id": "250150033956683776",
+  "channel_url": "https://www.tiktok.com/@MS4wLjABAAAARMM5AEhQ2rAL74Yux7eKtiyj4OsxPK5KuCVqiO-LKICC1O2sYICLCMfTWbR1__Mg",
+  "uploader_url": "https://www.tiktok.com/@bellathorne",
+  "track": "luxurious",
+  "artists": [
+    "milo"
+  ],
+  "duration": 17,
+  "title": "I never gatekeep my faves over @passes — my skincare, makeup, hair ca...",
+  "description": "I never gatekeep my faves over @passes — my skincare, makeup, hair care & GRWM routines are all over there 🫧✨",
+  "timestamp": 1761352083,
+  "view_count": 1300000,
+  "like_count": 19800,
+  "repost_count": 281,
+  "comment_count": 392,
+  "save_count": 3074,
+  "thumbnails": [
+    {
+      "id": "cover",
+      "url": "https://p16-common-sign.tiktokcdn.com/tos-maliva-i-photomode-us/8433fb25dac947f2b4ab286e1b971d0f~tplv-photomode-image.jpeg?dr=14555&x-expires=1781802000&x-signature=6p%2BiuDnhxFnZq94R0w%2F3nEI0GSQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=my2&ftpl=1",
+      "preference": -1
+    },
+    {
+      "id": "originCover",
+      "url": "https://p16-common-sign.tiktokcdn.com/tos-maliva-i-photomode-us/8433fb25dac947f2b4ab286e1b971d0f~tplv-photomode-image.jpeg?dr=14555&x-expires=1781802000&x-signature=6p%2BiuDnhxFnZq94R0w%2F3nEI0GSQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=my2&ftpl=1",
+      "preference": -1
+    }
+  ],
+  "webpage_url": "https://www.tiktok.com/@bellathorne/video/7564949445721345293",
+  "original_url": "https://www.tiktok.com/@bellathorne/video/7564949445721345293",
+  "webpage_url_basename": "7564949445721345293",
+  "webpage_url_domain": "tiktok.com",
+  "extractor": "TikTok",
+  "extractor_key": "TikTok",
+  "playlist": null,
+  "playlist_index": null,
+  "thumbnail": "https://p16-common-sign.tiktokcdn.com/tos-maliva-i-photomode-us/8433fb25dac947f2b4ab286e1b971d0f~tplv-photomode-image.jpeg?dr=14555&x-expires=1781802000&x-signature=6p%2BiuDnhxFnZq94R0w%2F3nEI0GSQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=my2&ftpl=1",
+  "display_id": "7564949445721345293",
+  "fulltitle": "I never gatekeep my faves over @passes — my skincare, makeup, hair ca...",
+  "duration_string": "17",
+  "upload_date": "20251025",
+  "release_year": null,
+  "artist": "milo",
+  "requested_subtitles": null,
+  "_has_drm": null,
+  "epoch": 1781629665,
+  "format_id": "audio",
+  "url": "https://v77.tiktokcdn.com/3dbe8432bf1cd94a5d34b4b46ed2bbbc/6a32d473/video/tos/useast2a/tos-useast2a-v-27dcd7/8578a3d4bec545fb970fa21ecd5e0eac/?a=1180&bti=ODszNWYuMDE6&&bt=123&ft=.NpOcInz7ThO2qiGXq8Zmo&mime_type=audio_mp4&rc=anRraDxvNGQ4NjMzNzU8M0BpanRraDxvNGQ4NjMzNzU8M0BecC4xXzZnMS5gLS1kMTZzYSNecC4xXzZnMS5gLS1kMTZzcw%3D%3D&vvpl=1&l=2026061701074519C60E8082A50F1A6A99&btag=e00078000",
+  "ext": "m4a",
+  "acodec": "aac",
+  "vcodec": "none",
+  "protocol": "https",
+  "audio_ext": "m4a",
+  "video_ext": "none",
+  "vbr": 0,
+  "abr": null,
+  "tbr": null,
+  "resolution": "audio only",
+  "aspect_ratio": null,
+  "filesize_approx": null,
+  "format": "audio - audio only",
+  "_filename": "metadata/7564949445721345293.m4a",
+  "filename": "metadata/7564949445721345293.m4a",
+  "_type": "video",
+  "_version": {
+    "version": "2026.03.17",
+    "current_git_head": null,
+    "release_git_head": "04d6974f502bbdfaed72c624344f262e30ad9708",
+    "repository": "yt-dlp/yt-dlp"
+  }
+}

@@ -1,0 +1,194 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 54px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  z-index: 9999;
+  pointer-events: auto;
+
+  &.search-mode {
+    background: #010101; /* Black background for search mode */
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.12);
+  }
+}
+
+.left-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+
+  .live-btn,
+  .sound-btn {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    color: #ffffff;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+    fill: #ffffff;
+    color: #ffffff;
+  }
+}
+
+.right-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  .ellipsis-btn {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+    fill: #ffffff;
+    color: #ffffff;
+  }
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tab-item {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  position: relative;
+  padding: 8px 4px;
+  transition: color 0.15s ease, font-weight 0.15s ease;
+
+  span {
+    position: relative;
+  }
+
+  &.active {
+    color: #ffffff;
+    font-weight: 700;
+
+    /* Dòng gạch dưới nhỏ đặc trưng của TikTok */
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 18px;
+      height: 3px;
+      background-color: #ffffff;
+      border-radius: 2px;
+    }
+  }
+}
+
+/* Mobile Search Layout */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.mobile-search-input {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  border-radius: 92px !important;
+  border: none !important;
+  color: #ffffff !important;
+  height: 36px !important;
+  padding-left: 12px !important;
+  
+  input {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    font-size: 1.4rem !important;
+    border: none !important;
+    outline: none !important;
+  }
+}
+
+.cancel-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 0 4px;
+}
+
+/* Ẩn trên màn hình Desktop */
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: none;
+  }
+}
+
+.wrapper.profile-mode {
+  background: #ffffff !important;
+  border-bottom: 0.5px solid rgba(22, 24, 35, 0.12) !important;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.03);
+
+  .icon {
+    color: var(--text-color) !important;
+    fill: var(--text-color) !important;
+  }
+
+  .back-btn {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    color: var(--text-color);
+  }
+
+  .profile-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

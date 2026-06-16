@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+npm-debug.log
+build/
+.eslintcache
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDEs & System
+.DS_Store
+.idea/
+.vscode/
+.claude/
+.remember/
+
+# Environments
+.env
+.env*.local

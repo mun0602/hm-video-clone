@@ -1,0 +1,110 @@
+{
+  "id": "7624681891332934942",
+  "formats": [
+    {
+      "format_id": "audio",
+      "url": "https://v77.tiktokcdn.com/4abce0bd519f04760cfab49d6210dbc9/6a32d479/video/tos/no1a/tos-no1a-v-2370-no/okFByBfLyiEA5oEAKmwFExiiH1APA0TsBqCdAh/?a=1180&bti=ODszNWYuMDE6&&bt=125&ft=.NpOcInz7ThD2qiGXq8Zmo&mime_type=audio_mpeg&rc=amlxbGw5cm10NzMzbzU8NUBpamlxbGw5cm10NzMzbzU8NUBwL2wtMmRjMjZhLS1kMTFzYSNwL2wtMmRjMjZhLS1kMTFzcw%3D%3D&vvpl=1&l=2026061701073909C0F693C42CC816062C&btag=e00048000",
+      "ext": "mp3",
+      "acodec": "mp3",
+      "vcodec": "none",
+      "protocol": "https",
+      "audio_ext": "mp3",
+      "video_ext": "none",
+      "vbr": 0,
+      "abr": null,
+      "tbr": null,
+      "resolution": "audio only",
+      "aspect_ratio": null,
+      "filesize_approx": null,
+      "http_headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-us,en;q=0.5",
+        "Sec-Fetch-Mode": "navigate",
+        "Referer": "https://www.tiktok.com/@bellathorne/video/7624681891332934942"
+      },
+      "format": "audio - audio only"
+    }
+  ],
+  "subtitles": {},
+  "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-us,en;q=0.5",
+    "Sec-Fetch-Mode": "navigate",
+    "Referer": "https://www.tiktok.com/@bellathorne/video/7624681891332934942"
+  },
+  "channel": "Bella Thorne",
+  "channel_id": "MS4wLjABAAAARMM5AEhQ2rAL74Yux7eKtiyj4OsxPK5KuCVqiO-LKICC1O2sYICLCMfTWbR1__Mg",
+  "uploader": "bellathorne",
+  "uploader_id": "250150033956683776",
+  "channel_url": "https://www.tiktok.com/@MS4wLjABAAAARMM5AEhQ2rAL74Yux7eKtiyj4OsxPK5KuCVqiO-LKICC1O2sYICLCMfTWbR1__Mg",
+  "uploader_url": "https://www.tiktok.com/@bellathorne",
+  "track": "fame is a gun trap mix",
+  "artists": [
+    "hiltonaudios"
+  ],
+  "duration": 30,
+  "title": "since Coachella is next week I haddd to reminisce on my past looks. S...",
+  "description": "since Coachella is next week I haddd to reminisce on my past looks. Scroll to the end, I was a babyyyy 🥲",
+  "timestamp": 1775259603,
+  "view_count": 978600,
+  "like_count": 43300,
+  "repost_count": 267,
+  "comment_count": 289,
+  "save_count": 1426,
+  "thumbnails": [
+    {
+      "id": "cover",
+      "url": "https://p16-common-sign.tiktokcdn.com/tos-maliva-i-photomode-us/a0227841d0de4b80a31c6ee5ba81e217~tplv-photomode-image.jpeg?dr=14555&x-expires=1781802000&x-signature=55aUDT27XjEE1nDr6r3GAEmSeGI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=my2&ftpl=1",
+      "preference": -1
+    },
+    {
+      "id": "originCover",
+      "url": "https://p16-common-sign.tiktokcdn.com/tos-maliva-i-photomode-us/a0227841d0de4b80a31c6ee5ba81e217~tplv-photomode-image.jpeg?dr=14555&x-expires=1781802000&x-signature=55aUDT27XjEE1nDr6r3GAEmSeGI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=my2&ftpl=1",
+      "preference": -1
+    }
+  ],
+  "webpage_url": "https://www.tiktok.com/@bellathorne/video/7624681891332934942",
+  "original_url": "https://www.tiktok.com/@bellathorne/video/7624681891332934942",
+  "webpage_url_basename": "7624681891332934942",
+  "webpage_url_domain": "tiktok.com",
+  "extractor": "TikTok",
+  "extractor_key": "TikTok",
+  "playlist": null,
+  "playlist_index": null,
+  "thumbnail": "https://p16-common-sign.tiktokcdn.com/tos-maliva-i-photomode-us/a0227841d0de4b80a31c6ee5ba81e217~tplv-photomode-image.jpeg?dr=14555&x-expires=1781802000&x-signature=55aUDT27XjEE1nDr6r3GAEmSeGI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=my2&ftpl=1",
+  "display_id": "7624681891332934942",
+  "fulltitle": "since Coachella is next week I haddd to reminisce on my past looks. S...",
+  "duration_string": "30",
+  "upload_date": "20260403",
+  "release_year": null,
+  "artist": "hiltonaudios",
+  "requested_subtitles": null,
+  "_has_drm": null,
+  "epoch": 1781629659,
+  "format_id": "audio",
+  "url": "https://v77.tiktokcdn.com/4abce0bd519f04760cfab49d6210dbc9/6a32d479/video/tos/no1a/tos-no1a-v-2370-no/okFByBfLyiEA5oEAKmwFExiiH1APA0TsBqCdAh/?a=1180&bti=ODszNWYuMDE6&&bt=125&ft=.NpOcInz7ThD2qiGXq8Zmo&mime_type=audio_mpeg&rc=amlxbGw5cm10NzMzbzU8NUBpamlxbGw5cm10NzMzbzU8NUBwL2wtMmRjMjZhLS1kMTFzYSNwL2wtMmRjMjZhLS1kMTFzcw%3D%3D&vvpl=1&l=2026061701073909C0F693C42CC816062C&btag=e00048000",
+  "ext": "mp3",
+  "acodec": "mp3",
+  "vcodec": "none",
+  "protocol": "https",
+  "audio_ext": "mp3",
+  "video_ext": "none",
+  "vbr": 0,
+  "abr": null,
+  "tbr": null,
+  "resolution": "audio only",
+  "aspect_ratio": null,
+  "filesize_approx": null,
+  "format": "audio - audio only",
+  "_filename": "metadata/7624681891332934942.mp3",
+  "filename": "metadata/7624681891332934942.mp3",
+  "_type": "video",
+  "_version": {
+    "version": "2026.03.17",
+    "current_git_head": null,
+    "release_git_head": "04d6974f502bbdfaed72c624344f262e30ad9708",
+    "repository": "yt-dlp/yt-dlp"
+  }
+}
