@@ -38,9 +38,13 @@ export default function useVideoControl({
       }
       
       const isSkipped = duration < 3;
-      const isRewatched = rewatchesRef.current > 0;
+      const baseUrl = (
+        process.env.REACT_APP_API_URL ||
+        process.env.REACT_APP_SUPABASE_URL ||
+        'http://localhost:8000'
+      ).replace(/\/$/, '');
       
-      fetch('http://localhost:8000/api/track/view', {
+      fetch(`${baseUrl}/api/track/view`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -10,6 +10,9 @@ RUN npm install
 # Copy source code
 COPY . .
 
+# Xóa file .env của local để tránh ghi đè các build argument của Docker
+RUN rm -f .env
+
 # Định nghĩa các biến môi trường build-time cho Supabase Mock URL (Backend FastAPI)
 ARG REACT_APP_SUPABASE_URL
 ENV REACT_APP_SUPABASE_URL=$REACT_APP_SUPABASE_URL
