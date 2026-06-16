@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { memo } from 'react';
+import { DEFAULT_AVATAR } from '~/constants/common';
 
 function AccountMessageItem({
   partnerInfo,
@@ -26,9 +27,13 @@ function AccountMessageItem({
     >
       <div className="w-[48px] h-[48px] relative">
         <img
-          src={partnerInfo.partner_avatar_url}
+          src={partnerInfo.partner_avatar_url || DEFAULT_AVATAR}
           alt="User Avatar"
           className="w-full h-full rounded-full"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = DEFAULT_AVATAR;
+          }}
         />
         <div
           className={`absolute bottom-[-2px] right-0 w-[1.4rem] h-[1.4rem] rounded-full border-2 border-white ${

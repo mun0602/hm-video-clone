@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import styles from '../../Upload.module.scss';
+import { DEFAULT_AVATAR } from '~/constants/common';
 
 const cx = classNames.bind(styles);
 
@@ -45,7 +46,14 @@ const PhonePreview = React.memo(
               />
               <div className={cx('sidebar-overlay')}>
                 <div className={cx('avatar-container')}>
-                  <img src={user.avatar_url} alt="avatar" />
+                  <img
+                    src={user.avatar_url || DEFAULT_AVATAR}
+                    alt="avatar"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = DEFAULT_AVATAR;
+                    }}
+                  />
                 </div>
                 <img
                   src="/images/sidebar-tiktok-phone.png"

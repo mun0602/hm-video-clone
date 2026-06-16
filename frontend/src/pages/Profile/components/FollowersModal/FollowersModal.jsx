@@ -8,6 +8,7 @@ import { usePreventBodyScroll } from '~/hooks';
 import { Link } from 'react-router-dom';
 import { toast } from 'sonner';
 import { TiktokLoading } from '~/components/Animations';
+import { DEFAULT_AVATAR } from '~/constants/common';
 
 function FollowersModal({
   isOpen,
@@ -166,9 +167,13 @@ function FollowersModal({
                   >
                     <div className={cx(styles.avatarContainer)}>
                       <img
-                        src={userData.avatar_url}
+                        src={userData.avatar_url || DEFAULT_AVATAR}
                         alt={userData.nickname}
                         className={cx(styles.avatar)}
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = DEFAULT_AVATAR;
+                        }}
                       />
                     </div>
                     <div className={cx(styles.userDetails)}>

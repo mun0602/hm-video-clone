@@ -14,6 +14,7 @@ import {
   SIDEBAR_MENU_ITEMS,
   UNAUTHENTICATED_SIDEBAR_MENU_ITEMS,
 } from '~/constants/sidebarConstants';
+import { DEFAULT_AVATAR } from '~/constants/common';
 
 const cx = classNames.bind(styles);
 
@@ -77,12 +78,29 @@ function Menu({
       // Tạo bản sao của SIDEBAR_MENU_ITEMS và cập nhật Profile item với avatar của user
       return SIDEBAR_MENU_ITEMS.map((item) => {
         if (item.title === 'Profile') {
+          const avatarSrc = user.avatar_url || DEFAULT_AVATAR;
           return {
             ...item,
             to: `/user/${user.nickname}`,
-            icon: <img alt="user" src={user.avatar_url} />,
+            icon: (
+              <img
+                alt="user"
+                src={avatarSrc}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = DEFAULT_AVATAR;
+                }}
+              />
+            ),
             activeIcon: (
-              <img alt="user" src={user.avatar_url} />
+              <img
+                alt="user"
+                src={avatarSrc}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = DEFAULT_AVATAR;
+                }}
+              />
             ),
           };
         }

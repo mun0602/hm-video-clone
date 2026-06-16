@@ -11,6 +11,7 @@ import { useSocialInteraction } from '~/contexts/SocialInteractionContext';
 import { Link, useNavigate } from 'react-router-dom';
 import { createConversationWithSystemMessage, navigateToConversation } from '~/services/conversationService';
 import { toast } from 'sonner';
+import { DEFAULT_AVATAR } from '~/constants/common';
 
 function ProfileHeader({ profile }) {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -119,8 +120,12 @@ function ProfileHeader({ profile }) {
         <div className={cx(styles['avatar-container'])}>
           <img
             alt="avatar"
-            src={profile.avatar_url}
+            src={profile.avatar_url || DEFAULT_AVATAR}
             className={cx(styles.avatar)}
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = DEFAULT_AVATAR;
+            }}
           />
         </div>
         <div className={cx(styles['user-info'])}>

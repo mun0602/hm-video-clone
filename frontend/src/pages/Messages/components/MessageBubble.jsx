@@ -2,6 +2,7 @@ import { useState, memo } from 'react';
 import PropTypes from 'prop-types';
 import { useAuth } from '~/contexts/AuthContext';
 import ReadStatus from './ReadStatus';
+import { DEFAULT_AVATAR } from '~/constants/common';
 
 const MessageBubble = memo(
   ({
@@ -100,9 +101,13 @@ const MessageBubble = memo(
         >
           {!isMe && (
             <img
-              src={receiverInfo.partner_avatar_url}
+              src={receiverInfo.partner_avatar_url || DEFAULT_AVATAR}
               alt="avatar"
               className="w-[3.2rem] h-[3.2rem] rounded-full flex-shrink-0"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = DEFAULT_AVATAR;
+              }}
             />
           )}
 
@@ -142,16 +147,20 @@ const MessageBubble = memo(
               <ReadStatus
                 message={message}
                 isRead={isReadByPartner}
-                partnerAvatar={receiverInfo.partner_avatar_url}
+                partnerAvatar={receiverInfo.partner_avatar_url || DEFAULT_AVATAR}
               />
             )}
           </div>
 
           {isMe && (
             <img
-              src={user.avatar_url}
+              src={user.avatar_url || DEFAULT_AVATAR}
               alt="avatar"
               className="w-[3.2rem] h-[3.2rem] rounded-full flex-shrink-0"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = DEFAULT_AVATAR;
+              }}
             />
           )}
         </div>

@@ -5,6 +5,7 @@ import { CloseIcon, UploadIcon2 } from '~/assets/images/icons';
 import styles from './EditProfileModal.module.scss';
 import supabase from '~/config/supabaseClient';
 import { usePreventBodyScroll } from '~/hooks';
+import { DEFAULT_AVATAR } from '~/constants/common';
 
 function EditProfileModal({ isOpen, onClose, userProfile }) {
   const fileInputRef = useRef(null);
@@ -164,9 +165,13 @@ function EditProfileModal({ isOpen, onClose, userProfile }) {
                 onClick={handleAvatarClick}
               >
                 <img
-                  src={previewAvatar}
+                  src={previewAvatar || DEFAULT_AVATAR}
                   alt="avatar"
                   className={cx(styles.avatar)}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = DEFAULT_AVATAR;
+                  }}
                 />
                 <div className={cx(styles.avatarOverlay)}>
                   <UploadIcon2 />

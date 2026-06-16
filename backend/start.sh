@@ -13,7 +13,11 @@ mkdir -p /app/static/uploads/thumbnails
 # Khôi phục các file tĩnh demo từ bản sao lưu nếu chúng chưa tồn tại trong volume mount
 if [ -d /app/static_backup/uploads ]; then
   echo "Đang khôi phục các file media/video demo vào volume..."
-  cp -rn /app/static_backup/uploads/* /app/static/uploads/
+  # Sao chép trực tiếp nội dung các thư mục con để tránh cp -rn bỏ qua khi thư mục cha đã tồn tại
+  cp -rn /app/static_backup/uploads/thumbnails/. /app/static/uploads/thumbnails/
+  cp -rn /app/static_backup/uploads/videos/. /app/static/uploads/videos/
+  cp -n /app/static_backup/uploads/* /app/static/uploads/ 2>/dev/null || true
+  echo "Đã khôi phục xong các file demo."
 fi
 
 # Chạy uvicorn server

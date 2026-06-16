@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { DEFAULT_AVATAR } from '~/constants/common';
 
 const ChatHeader = ({ receiverInfo, isReceiverOnline }) => {
   return (
@@ -6,9 +7,13 @@ const ChatHeader = ({ receiverInfo, isReceiverOnline }) => {
       <div className="flex items-center">
         <div className="w-[4.8rem] h-[4.8rem] rounded-full mr-[1.4rem] relative">
           <img
-            src={receiverInfo.partner_avatar_url}
+            src={receiverInfo.partner_avatar_url || DEFAULT_AVATAR}
             alt="User Avatar"
             className="w-full h-full object-cover rounded-full"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = DEFAULT_AVATAR;
+            }}
           />
           <div
             className={`absolute bottom-[-2px] right-0 w-[1.4rem] h-[1.4rem] rounded-full border-2 border-white ${

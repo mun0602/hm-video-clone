@@ -14,6 +14,8 @@ import {
   ProfileIcon,
 } from '~/assets/images/icons';
 
+import { DEFAULT_AVATAR } from '~/constants/common';
+
 const cx = classNames.bind(styles);
 
 function BottomBar() {
@@ -69,7 +71,15 @@ function BottomBar() {
           className={cx('item', { active: user && location.pathname.startsWith(`/user/${user.nickname}`) })}
         >
           {user ? (
-            <img src={user.avatar_url} alt="avatar" className={cx('avatar')} />
+            <img
+              src={user.avatar_url || DEFAULT_AVATAR}
+              alt="avatar"
+              className={cx('avatar')}
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = DEFAULT_AVATAR;
+              }}
+            />
           ) : (
             <ProfileIcon className={cx('icon')} />
           )}

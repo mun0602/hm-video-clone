@@ -16,6 +16,8 @@ import { useAuth } from '~/contexts/AuthContext';
 import { useSocialInteraction } from '~/contexts/SocialInteractionContext';
 import { Link } from 'react-router-dom';
 
+import { DEFAULT_AVATAR } from '~/constants/common';
+
 const cx = classNames.bind(styles);
 
 const ActionButton = React.memo(
@@ -141,9 +143,13 @@ function VideoActions({ video }) {
         to={`/user/${video.user.nickname}`}
       >
         <img
-          src={video.user.avatar_url}
+          src={video.user.avatar_url || DEFAULT_AVATAR}
           alt="avatar"
           className={cx('avatar')}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = DEFAULT_AVATAR;
+          }}
         />
         <div
           className={cx('follow-btn', {
