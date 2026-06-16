@@ -1,7 +1,41 @@
 // Mock Supabase Client for toptop
 // Chuyển hướng toàn bộ các lệnh gọi Supabase sang Backend FastAPI cục bộ chạy tại http://localhost:8000
 
-import axios from 'axios';
+import axiosOriginal from 'axios';
+
+const axios = axiosOriginal.create();
+
+// Helper đệ quy chuẩn hóa URL tĩnh thành relative path
+function normalizeUrls(obj) {
+  if (!obj) return obj;
+  if (typeof obj === 'string') {
+    if (obj.startsWith('http') && obj.includes('/static/uploads/')) {
+      const index = obj.indexOf('/static/uploads/');
+      return obj.substring(index);
+    }
+    return obj;
+  }
+  if (Array.isArray(obj)) {
+    return obj.map(normalizeUrls);
+  }
+  if (typeof obj === 'object') {
+    const newObj = {};
+    for (const key in obj) {
+      newObj[key] = normalizeUrls(obj[key]);
+    }
+    return newObj;
+  }
+  return obj;
+}
+
+// Thêm response interceptor để tự động chuẩn hóa mọi URL static nhận được từ API
+axios.interceptors.response.use(
+  (response) => {
+    response.data = normalizeUrls(response.data);
+    return response;
+  },
+  (error) => Promise.reject(error)
+);
 
 const API_BASE = (
   process.env.REACT_APP_API_URL ||

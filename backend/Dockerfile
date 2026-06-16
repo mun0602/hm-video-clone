@@ -15,6 +15,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy toàn bộ code backend
 COPY . .
 
+# Sao lưu thư mục static gốc để phục hồi khi mount Docker volume
+RUN cp -r /app/static /app/static_backup
+
 # Expose cổng 8000
 EXPOSE 8000
 

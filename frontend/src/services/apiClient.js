@@ -12,6 +12,29 @@ const API_BASE_URL = (
 
 const TOKEN_KEY = 'hm_token';
 
+// Helper đệ quy chuẩn hóa URL tĩnh thành relative path
+function normalizeUrls(obj) {
+  if (!obj) return obj;
+  if (typeof obj === 'string') {
+    if (obj.startsWith('http') && obj.includes('/static/uploads/')) {
+      const index = obj.indexOf('/static/uploads/');
+      return obj.substring(index);
+    }
+    return obj;
+  }
+  if (Array.isArray(obj)) {
+    return obj.map(normalizeUrls);
+  }
+  if (typeof obj === 'object') {
+    const newObj = {};
+    for (const key in obj) {
+      newObj[key] = normalizeUrls(obj[key]);
+    }
+    return newObj;
+  }
+  return obj;
+}
+
 export function getToken() {
   return localStorage.getItem(TOKEN_KEY);
 }
@@ -25,7 +48,7 @@ export function setToken(token) {
 }
 
 export function clearToken() {
-  localStorage.removeItem(TOKEN_KEY);
+  return localStorage.removeItem(TOKEN_KEY);
 }
 
 /**
@@ -86,7 +109,7 @@ export async function apiFetch(path, { method = 'GET', body, headers = {}, signa
     throw err;
   }
 
-  return data;
+  return normalizeUrls(data);
 }
 
 // ============================================================
