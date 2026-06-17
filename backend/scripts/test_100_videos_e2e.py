@@ -50,12 +50,12 @@ def main():
 
     # === Test 2: Feed API ===
     print("\n[2] Feed API")
-    from api.feed import _build_video_response
+    from api.utils import build_single_video_response
     all_videos = db.query(models.Video).order_by(models.Video.view_count.desc()).limit(30).all()
     all_passed &= _ok(len(all_videos) == 30, f"Top 30: {len(all_videos)} videos")
 
     if all_videos:
-        resp = _build_video_response(all_videos[0], None, db)
+        resp = build_single_video_response(all_videos[0], None, db)
         keys = list(resp.keys())
         all_passed &= _ok("id" in resp, f"Response has 'id': {keys[:8]}")
         all_passed &= _ok("description" in resp, f"Response has 'description'")

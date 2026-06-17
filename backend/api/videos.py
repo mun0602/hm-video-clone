@@ -13,57 +13,13 @@ import video_processing
 from auth_utils import get_current_user, get_optional_current_user
 from database import get_db
 
+from api.utils import build_single_video_response, build_video_responses
+
 router = APIRouter(prefix="/api/videos", tags=["videos"])
 
 # Giới hạn upload — 100MB. Đổi tùy infra.
 MAX_UPLOAD_BYTES = 100 * 1024 * 1024
 ALLOWED_CONTENT_TYPES = {"video/mp4", "video/quicktime", "video/webm", "application/octet-stream"}
-
-
-def _build_video_response(video: models.Video, current_user: Optional[models.User], db: Session, request: Optional[Request] = None) -> dict:
-    """Serialize video + denormalized counts + user state flags."""
-    is_liked = False
-    is_followed = False
-    if current_user:
-        is_liked = db.query(models.Like).filter(
-            models.Like.video_id == video.id,
-            models.Like.user_id == current_user.id,
-        ).first() is not None
-        is_followed = db.query(models.Follow).filter(
-            models.Follow.follower_id == current_user.id,
-            models.Follow.following_id == video.user_id,
-        ).first() is not None
-
-    def _abs(url: Optional[str]) -> Optional[str]:
-        if not url or not request:
-            return url
-        if url.startswith(("http://", "https://")):
-            return url
-        return str(request.base_url).rstrip("/") + url
-
-    return {
-        "id": video.id,
-        "description": video.title,
-        "file_url": _abs(video.video_url),
-        "thumb_url": _abs(video.cover_url),
-        "tags": [t.strip() for t in (video.tags or "").split(",") if t.strip()],
-        "duration_seconds": video.duration_seconds,
-        "created_at": video.created_at.isoformat() if video.created_at else None,
-        "view_count": video.view_count or 0,
-        "like_count": video.like_count or 0,
-        "comment_count": len(video.comments),
-        "share_count": video.share_count or 0,
-        "is_liked": is_liked,
-        "is_followed": is_followed,
-        "user": {
-            "id": video.creator.id,
-            "nickname": video.creator.username,
-            "fullName": video.creator.display_name,
-            "avatar_url": video.creator.avatar_url,
-            "bio": video.creator.bio,
-            "tick": True,
-        },
-    }
 
 
 @router.post("/upload")
@@ -144,7 +100,7 @@ def get_video(
     video = db.query(models.Video).filter(models.Video.id == video_id).first()
     if not video:
         raise HTTPException(status_code=404, detail="Video không tồn tại")
-    return _build_video_response(video, current_user, db, request)
+    return build_single_video_response(video, current_user, db, request)
 
 
 @router.get("/by-creator/{user_id}")
@@ -164,4 +120,4 @@ def list_videos_by_creator(
         .offset(offset)
         .all()
     )
-    return [_build_video_response(v, None, db, request) for v in videos]
+    return build_video_responses(videos, None, db, request)

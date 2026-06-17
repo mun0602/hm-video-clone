@@ -144,6 +144,6 @@ def get_user_videos(
         .all()
     )
 
-    # Reuse helper từ api/feed.py
-    from api.feed import _build_video_response
-    return [_build_video_response(v, current_user, db) for v in videos]
+    # Reuse helper từ api.utils
+    from api.utils import build_video_responses
+    return build_video_responses(videos, current_user, db)
